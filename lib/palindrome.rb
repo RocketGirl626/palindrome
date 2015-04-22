@@ -17,9 +17,10 @@ end
 
 class String
   define_method(:palindrome) do
-    original_string = self
+    original_string = self.gsub(/\s+/, "").downcase()
     pal_array = []
-    reversed_original_string = self.split("")
+    reversed_original_string = original_string.split("")
+
     looptimes = reversed_original_string.length()
     looptimes.times() do
       x = reversed_original_string.pop()
