@@ -18,6 +18,8 @@ end
 
 # Able to check to see if a string is a palindrome without using the reverse method.
 # Able to compare even with uppercase letters, symbols or spaces
+
+
 class String
   define_method(:palindrome) do
     original_string = self.gsub(/\s+/, "").downcase()
